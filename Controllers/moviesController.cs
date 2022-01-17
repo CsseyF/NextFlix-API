@@ -14,6 +14,14 @@ namespace NextFlixAPI.Controllers{
         {
             _movieService = movieService;
         }
+
+        [HttpGet]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type=typeof(Movie))]
+            public ActionResult GetList(){
+                return Ok(_movieService.GetList());
+            }
+    
+        
         
         /// <summary>
         /// Returns a Movie by it id

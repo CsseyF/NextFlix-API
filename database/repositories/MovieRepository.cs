@@ -3,6 +3,7 @@ using NextFlixAPI.Entities;
 namespace NextFlixAPI.Database.Repositories
 {
     public interface IMovieRepository {
+        IEnumerable<Movie> GetList();
         Movie GetById(int id);
         Movie GetByName(string name);
         IEnumerable<Movie> GetAllWithName(string name);
@@ -15,6 +16,10 @@ namespace NextFlixAPI.Database.Repositories
             _context = context;
         }
 
+
+        public IEnumerable<Movie> GetList(){
+            return _context.Movie;
+        }
         public Movie GetById(int id){
             return _context.Movie.FirstOrDefault(item => item.Id == id);
         }

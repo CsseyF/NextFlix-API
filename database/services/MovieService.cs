@@ -3,6 +3,7 @@ using NextFlixAPI.Entities;
 
 namespace NextFlixAPI.Database.Services{
     public interface IMovieService{
+        Task<IEnumerable<Movie>> GetList();
         Task<Movie> GetById(int id);
         Task<Movie> GetByName(string name);
         Task<IEnumerable<Movie>> GetAllWithName(string name);
@@ -15,6 +16,10 @@ namespace NextFlixAPI.Database.Services{
         public MovieService(IMovieRepository movieRepository)
         {
             _movieRepository = movieRepository;
+        }
+
+        public async Task<IEnumerable<Movie>> GetList(){
+           return _movieRepository.GetList(); 
         }
 
         public async Task<Movie> GetById(int id){

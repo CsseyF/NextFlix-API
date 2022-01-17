@@ -18,5 +18,11 @@ namespace NextFlixAPI.Entities{
 
         [Column(TypeName = "varchar(50)")]
         public string Genres {get; set;}
+
+        [Column(TypeName = "varchar(2)")]
+        public int Maturity{ get;set;}
+
+        [Column(TypeName = "varchar(10)")]
+        public string Duration{get; set;}
     }
 }
