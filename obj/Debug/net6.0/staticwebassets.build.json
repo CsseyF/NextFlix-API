@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "I41pitYfmrMDYsHZz+kzzwnyfjnePBzctK8WvQJHqY8=",
+  "Source": "NextflixAPI",
+  "BasePath": "_content/NextflixAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
